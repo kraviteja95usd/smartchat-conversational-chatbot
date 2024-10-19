@@ -66,10 +66,6 @@ More information can be found at: https://rajpurkar.github.io/SQuAD-explorer/
 - rouge
 - gradio
 - tqdm
-- evaluate
-- transformers
-- datasets
-- seaborn
 
 # Usage of the Project
 
