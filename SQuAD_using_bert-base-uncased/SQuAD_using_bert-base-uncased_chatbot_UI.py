@@ -170,7 +170,7 @@ def chatbot_interface():
         """)
 
         gr.Markdown("<h1 style='text-align: center; color: #4CAF50;'>🧠 SmartChat: A Context-Aware Conversational Agent</h1>")
-        gr.Markdown("<p style='text-align: center; color: #333;'>Set a context and then ask multiple questions based on that context.</p>")
+        gr.Markdown("<p style='text-align: center; color: #777;'>Set a context and then ask multiple questions based on that context.</p>")
 
         context_state = gr.State()
 
@@ -197,7 +197,12 @@ def chatbot_interface():
         )
         submit_btn = gr.Button("Submit Question")
 
-        footer = gr.Markdown("<p style='text-align: right; font-size: 12px; color: #777;'>Prepared by: Ravi Teja Kothuru</p>")
+        footer = gr.Markdown("""
+            <div style='display: flex; justify-content: space-between; font-size: 12px; color: #777;'>
+                <p style='margin: 0;'>Trained using: bert-base-uncased</p>
+                <p style='margin: 0;'>Prepared by: Ravi Teja Kothuru, Soumi Ray and Anwesha Sarangi</p>
+            </div>
+        """)
 
         def set_context(context):
             """
