@@ -10,7 +10,8 @@
 8. [Size of the dataset](#size-of-the-dataset)
 9. [Algorithms which are used as part of our investigation](#algorithms-which-are-used-as-part-of-our-investigation)
 10. [Project Requirements](#project-requirements)
-11. [Authors](#authors)
+11. [Usage of the Project](#usage-of-the-project)
+12. [Authors](#authors)
 
 # Repository Name
 smartchat-conversational-chatbot
@@ -69,6 +70,11 @@ More information can be found at: https://rajpurkar.github.io/SQuAD-explorer/
 - transformers
 - datasets
 - seaborn
+
+# Usage of the Project
+
+- To execute and view the results of BERT (bert-base-uncased) approach, please go through the instructions provided in the [SQuAD_chatbot_using_bert-base-uncased_README.md](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_bert-base-uncased/SQuAD_chatbot_using_bert-base-uncased_README.md) file.
+- To execute and view the results of GPT (gpt2-medium using LoRA and PEFT) approach, please go through the instructions provided in the [SQuAD_chatbot_using_gpt2-medium_README.md](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_gpt2-medium/SQuAD_chatbot_using_gpt2-medium_README.md) file.
 
 # Authors
 | Author            | Contact Details         |
