@@ -14652,20 +14652,50 @@ More information can be found at: <a href="https://rajpurkar.github.io/SQuAD-exp
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>torch<span class="w"> </span>transformers<span class="w"> </span>datasets<span class="w"> </span>tqdm<span class="w"> </span>scikit-learn<span class="w"> </span>rouge-score<span class="w"> </span>nltk
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># torch - for PyTorch library for deep learning</span>
+<span class="c1"># transformers - for loading pre-trained models and tokenizers from Hugging Face</span>
+<span class="c1"># datasets - for loading datasets, such as SQuAD</span>
+<span class="c1"># tqdm - for displaying progress bars in loops</span>
+<span class="c1"># scikit-learn - for various metrics and machine learning tools</span>
+<span class="c1"># rouge-score - for computing ROUGE score, used in evaluating text generation models</span>
+<span class="c1"># nltk - Natural Language Toolkit for working with human language data</span>
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>torch<span class="w"> </span>transformers<span class="w"> </span>datasets<span class="w"> </span>tqdm<span class="w"> </span>scikit-learn<span class="w"> </span>rouge-score<span class="w"> </span>nltk
 
+<span class="c1"># Import the regular expressions module for text processing</span>
 <span class="kn">import</span> <span class="nn">re</span>
+
+<span class="c1"># Import pandas for data manipulation and analysis, especially for handling DataFrames</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Import PyTorch library</span>
 <span class="kn">import</span> <span class="nn">torch</span>
+
+<span class="c1"># Import Dataset and DataLoader classes for creating custom datasets and loading them during training</span>
 <span class="kn">from</span> <span class="nn">torch.utils.data</span> <span class="kn">import</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">DataLoader</span>
+
+<span class="c1"># Import BertTokenizerFast for fast tokenization, and BertForQuestionAnswering for question answering tasks using BERT</span>
 <span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">BertTokenizerFast</span><span class="p">,</span> <span class="n">BertForQuestionAnswering</span><span class="p">,</span> <span class="n">get_scheduler</span>
+
+<span class="c1"># Import tqdm for showing a progress bar during iterations</span>
 <span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+
+<span class="c1"># Import os for interacting with the operating system, such as file and directory management</span>
 <span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Import precision_score, recall_score, and f1_score for evaluating model performance using precision, recall, and F1 metrics</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">f1_score</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span>
+
+<span class="c1"># Import rouge_scorer for calculating ROUGE scores, a metric used for evaluating the quality of text generation</span>
 <span class="kn">from</span> <span class="nn">rouge_score</span> <span class="kn">import</span> <span class="n">rouge_scorer</span>
+
+<span class="c1"># Import sentence_bleu and single_meteor_score from nltk for calculating BLEU and METEOR scores, used in natural language processing evaluation</span>
 <span class="kn">from</span> <span class="nn">nltk.translate.bleu_score</span> <span class="kn">import</span> <span class="n">sentence_bleu</span>
 <span class="kn">from</span> <span class="nn">nltk.translate.meteor_score</span> <span class="kn">import</span> <span class="n">single_meteor_score</span>
+
+<span class="c1"># Import matplotlib.pyplot for creating plots and visualizations</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Import seaborn for enhanced data visualization, built on top of matplotlib</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 </pre></div>
 
@@ -15560,7 +15590,18 @@ Let us better understand about them before deciding which one to use.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Interpretations-and-Issues-observed-from-GPT2-Medium-architecture">Interpretations and Issues observed from GPT2-Medium architecture<a class="anchor-link" href="#Interpretations-and-Issues-observed-from-GPT2-Medium-architecture">&#182;</a></h3><p>For this project, I have initially went with <strong>GPT2-Medium</strong> architecture.</p>
+<h3 id="Interpretations-and-Issues-observed-from-GPT2-Medium-architecture">Interpretations and Issues observed from GPT2-Medium architecture<a class="anchor-link" href="#Interpretations-and-Issues-observed-from-GPT2-Medium-architecture">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>For this project, I have initially went with <strong>GPT2-Medium</strong> architecture.</p>
 <p>GPT2-Medium is actually very good for the following reasons for the same:</p>
 <p><strong>Text Generation Capability:</strong> GPT has been specifically designed for generating the text, making it highly effective for producing logically reasoned responses in conversational contexts such as to-and-fro chats with chatbot.</p>
 <p><strong>Availability of Pre-trained Models:</strong> Models like GPT-3 are pre-trained on extensive datasets. These kind of models deliver contextually appropriate responses on a wide range of topics without the need for extensive additional training.</p>
@@ -15579,6 +15620,7 @@ Let us better understand about them before deciding which one to use.</p>
 <li>We trained data on GPT2-Medium model without passing the <code>ans_start</code> and <code>ans_end</code> variables to the train set. This could also be one of the reasons. And due to the text generation nature of GPT2-Medium model, we are unable to achieve as expected.</li>
 <li>Due to time and computational resource constraints, we are unable to provide more tweaking and training to the GPT2-Medium model.</li>
 </ul>
+<p>For detailed information on the pain points noticed, please visit the <strong>Pain points noticed and the tasks that were not performed</strong> section of <a href="https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_gpt2-medium/squad_lora_gpt2_medium_validation.ipynb">this file</a>.</p>
 
 </div>
 </div>
@@ -18486,6 +18528,143 @@ class="
 
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Overall-Observations-from-this-approach:**">Overall Observations from this approach:**<a class="anchor-link" href="#Overall-Observations-from-this-approach:**">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Strengths-and-Tasks-performed-uniquely-compared-with-GPT2-medium-approach:">Strengths and Tasks performed uniquely compared with GPT2-medium approach:<a class="anchor-link" href="#Strengths-and-Tasks-performed-uniquely-compared-with-GPT2-medium-approach:">&#182;</a></h3><p>*<strong>Unlike GPT2-medium approach:</strong>*</p>
+<p>Yes, unlike the GPT2-medium approach, we have achieved great results when we applied BERT's bert-based-uncased model. Look at the following points on what we had followed to acheive this.</p>
+<ul>
+<li><p>Here, we have uniquely followed by manually downloading the dataset, converting it to a dataframe and saving that file as well.</p>
+</li>
+<li><p>We haven't directly applied tokenization on the text data captured from the dataset. Instead, we performed some data cleaning before that.</p>
+</li>
+<li><p>We haven't used LoRA and PEFT techniques here. Instead, we used totally Pythonic approach to experiment how this model works by applying all the techniques using PyTorch library followed by the remaining ones.</p>
+</li>
+<li><p>As the requirement is to build the chatbot, we have to generate the text based answers for the context and question passed in. Here, we have not only considered the text generation point of view, but also we are responsible to manage the context and handle variety of topics while generating the text.</p>
+</li>
+<li><p>We made use of the <code>ans_start</code> and <code>ans_end</code> variables in the train dataset to capture the correct part of the answer.</p>
+</li>
+<li><p>This model has not ran into issues/errors while executing in MacBooks. This model is environment agnostic.</p>
+</li>
+<li><p>Though we don't have sufficient computational resources, we were able to achieve all the required results. Basically, we were able to validate all the 10570 rows of the validation dataset.</p>
+</li>
+<li><p>This model might not have great text generation capabilities compared with GPT2-medium model. But, it understands the context very well and can almost exactly predict the answers as expected, although there are some issues with the edge case rows alone (example: the answer of a row would be <code>[&quot;Newton was limited by Denver's defense&quot;, 'Newton', 'Newton']</code>).</p>
+</li>
+<li><p>Validation loss was of minor but not that minor than GPT2-medium architecture. Still if we compare it in context management and variety topics handling point of view, BERT model was so good.</p>
+</li>
+<li><p>As I already mentioned in <a href="https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_gpt2-medium/squad_lora_gpt2_medium_validation.ipynb">this file</a>, please be informed that usually such type of Question-Answering datasets does not qualify for a conversational chatbot that supports multi-turn conversations.</p>
+</li>
+</ul>
+<p>However, we had included the context-management as well as handling variety of topics. Let me explain them below.</p>
+<pre><code>- ***Context Management***: We trained this model in such a way that if you just set the context once and ask multiple questions one after the other, it will definitely answer your questions based on that context. If at all you wish to change the context, just change it and ask the questions accordingly.
+- ***Handling Variety of topics***: Ofcourse we have handled this. Though we trained this using SQuAD dataset alone, even though you provide some random context from the internet and ask questions based on it, it will definitely answer your query.
+
+</code></pre>
+<p>For evidences, please take a look at the result files.</p>
+<p>Links to the resultant files:</p>
+<ul>
+<li><p><a href="https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_bert-base-uncased/SQuAD_using_bert-base-uncased_chatbot_UI_Screenshots/SquAD_using_BERT_Dark_Themed_Chatbot_UI_Screenshots.pdf">Dark Themed Chatbot UI Results of SQuAD Chatbot using BERT</a></p>
+</li>
+<li><p><a href="https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_bert-base-uncased/SQuAD_using_bert-base-uncased_chatbot_UI_Screenshots/SquAD_using_BERT_White_Themed_Chatbot_UI_Screenshots.pdf">Light Themed Chatbot UI Results of SQuAD Chatbot using BERT</a></p>
+</li>
+<li><p>Let us take a look at the performance metrics scores of this model post predictions.</p>
+<ul>
+<li><p>*<strong>BLEU Score(0.47)</strong>*: Usually, BLEU score explains the similarity between the actual and predicted texts. If a BLEU  score value is  0.47, it means that there is a moderate (47%) similarity between the actual and predicted texts. It captures certain important phrases or sequences of words, though not exact.</p>
+</li>
+<li><p>*<strong>ROUGE-1 (0.62)</strong>*: Assesses the similarity of individual words (unigrams) in the produced text and the reference. A score of 0.62 implies that approximately 62% of the individual words in the reference text are present in the generated output.</p>
+</li>
+<li><p>*<strong>ROUGE-2 (0.37)</strong>*: Assesses the similarity of adjacent word pairs. A 0.37 score means approximately 37% of the bigrams from the reference are found in the generated output.</p>
+</li>
+<li><p>*<strong>ROUGE-L (0.61)</strong>*: Takes into account the longest common subsequence (LCS) between the produced output and the reference. The score indicates that approximately 61% of the reference's content is accounted for by the longest matching sequences.</p>
+</li>
+</ul>
+<p>Overall observation for ROUGE score is: the ROUGE scores indicate a moderate level of similarity between the generated responses and the reference answers, with better matching at the unigram level than at the bigram level.</p>
+<ul>
+<li><p>Because, - As I already mentioned in <a href="https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_gpt2-medium/squad_lora_gpt2_medium_validation.ipynb">this file</a>, there are few edge case anwers in the validation dataset such as <code>[&quot;Newton was limited by Denver's defense&quot;, 'Newton', 'Newton']</code>. Due to such reasons, along with using only the first 5 rows to predict, the ROUGE and BLEU scores were very low. But in general if you look at the above predicted results, this model has very well predicted the results.</p>
+</li>
+<li><p>Frequency distributions of both the actual and predicted answers' words are almost consistent from the histogram plotted above.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Pain-points-noticed-and-the-tasks-that-were-not-performed:">Pain points noticed and the tasks that were not performed:<a class="anchor-link" href="#Pain-points-noticed-and-the-tasks-that-were-not-performed:">&#182;</a></h3><ul>
+<li>Due to time constraints, we could not spend on handling the edge cases where multiple answers are available within the single question of the context in validation dataset (example: <code>[&quot;Newton was limited by Denver's defense&quot;, 'Newton', 'Newton']</code>).</li>
+<li>We might have lost the accuracy in terms of exactly matching the predicted answer with the actual answer. But still, I am very happy that the predicted answer is the correct one.</li>
+<li>Due to computational resource and time constraints, we performed only the following items in minimal amount:<ol>
+<li>I could train only 3 epochs with sleepless nights with a very low level GPU that's embedded within my MacBook.</li>
+<li>We are unable to achieve multi-turn conversations feature because.</li>
+</ol>
+</li>
+</ul>
+<p>Overall, when we compare this approach with GPT2-medium approach, this has outperformed from its predictions, context management, handling variety of topics point of view.</p>
+<p><strong>IMPORTANT NOTE:</strong></p>
+<ul>
+<li><p>Here, wherever I mention about *<strong>not matching the predicted answer with actual answer</strong>* means:</p>
+<ul>
+<li>It could be appending additional response either to the prefix or suffix area of the predicted answer.</li>
+<li>It could be because of predicted answer being displayed as <code>denver</code> and actual answer could be <code>Denver</code>.</li>
+<li>It could be because of predicted answer being displayed as <code>denver</code> and actual answer could be <code>['Denver', 'Denver', 'Denver']</code>.</li>
+</ul>
+<p>But not from the obtained answer point of view.😊</p>
+</li>
+</ul>
+<h3 id="Future-Improvement-Suggestions:">Future Improvement Suggestions:<a class="anchor-link" href="#Future-Improvement-Suggestions:">&#182;</a></h3><ul>
+<li>Try a hybrid mode of training. I mean - we can give a try to take 3 to 4 conversational dataset along with the current SQuAD one, train all of them to a single model, apply multi-turn conversational approaches and make it a complete chatbot. It should be similar to ChatGPT, perplexity.ai, blackbox.ai, Meta AI etc. etc.</li>
+<li>Try obtaining some high computational power so that the the training and validation can be perfectly done.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Business-use-cases-of-this-Chatbot">Business use-cases of this Chatbot<a class="anchor-link" href="#Business-use-cases-of-this-Chatbot">&#182;</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Chatbots can be used in real-world at many places. Few use-cases would be:</p>
+<ul>
+<li>24*7 customer support to handle customer queries and guide in resolving the issues.</li>
+<li>Automation of FAQs in any field.</li>
+<li>Users can check the status of their eCommerce orders and get notified about shipping updates.</li>
+<li>Users can get their banking informatione easily.</li>
+<li>Help students with basic educational information.</li>
+<li>Book online health consultations.</li>
+<li>Help astronauts and ground control by offering rapid access to mission information, schedules, and problem-solving guidelines. For example, they are able to access data on spacecraft systems or conduct simple calculations for navigation purposes.</li>
+<li>Utilize in streaming platforms to suggest songs, albums, or artists by considering user preferences and listening history. Additionally, they have the ability to recommend playlists tailored to certain emotions, tasks, or music styles.</li>
+<li>Communicate with robots in order to assist operators in managing or overseeing robotic systems. As an illustration, they are able to give status updates, manage motion, or carry out instructions in manufacturing industrial robots.</li>
+</ul>
+
+</div>
+</div>
+</div>
 </div>
 </body>
 
