@@ -1,3 +1,7 @@
+## Contents
+1. [Usage Instructions in Local System](#usage-instructions-in-local-system)
+2. [Note to the Viewers or Users](#note-to-the-viewers-or-users)
+
 # Usage Instructions in Local System
 - Clone using HTTPS
 ```commandline
@@ -61,3 +65,6 @@ jupyter lab
           - If your system is in Dark mode, this UI page looks in the same theme. If you system is in Light mode, then you will view it in white color.
     - You can look at the execution results within the Notebook file as well as [here](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/tree/chatbot-by-ravi/SQuAD_using_gpt2-medium/SQuAD_using_gpt2-medium_chatbot_UI_Screenshots) and interpret accordingly.
       - Note that there are 2 folders inside it and there are screenshot files inside each of those folders. You can view anything to understand that.
+
+# Note to the Viewers or Users
+- Ensure you are going through [this](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/README.md#which-chatbot-architecture-should-the-users-use) before proceeding with the next step.
