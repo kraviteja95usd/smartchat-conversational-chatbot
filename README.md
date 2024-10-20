@@ -11,7 +11,8 @@
 9. [Algorithms which are used as part of our investigation](#algorithms-which-are-used-as-part-of-our-investigation)
 10. [Project Requirements](#project-requirements)
 11. [Usage of the Project](#usage-of-the-project)
-12. [Authors](#authors)
+12. [Which chatbot architecture should the users use](#which-chatbot-architecture-should-the-users-use)
+13. [Authors](#authors)
 
 # Repository Name
 smartchat-conversational-chatbot
@@ -45,7 +46,7 @@ More information can be found at: https://rajpurkar.github.io/SQuAD-explorer/
   - train-v1.1.json – 30.3 MB
 
 # Algorithms which are used as part of our investigation
-- 2 different architectures can be used:
+- 2 different architectures are used:
   - GPT2-Medium architecture using LoRA and PEFT
   - BERT (bert-base-uncased)
 
@@ -61,6 +62,7 @@ More information can be found at: https://rajpurkar.github.io/SQuAD-explorer/
 - pandas 
 - matplotlib 
 - scikit-learn 
+- seaborn
 - nltk 
 - rouge-score
 - rouge
@@ -68,9 +70,18 @@ More information can be found at: https://rajpurkar.github.io/SQuAD-explorer/
 - tqdm
 
 # Usage of the Project
-
+- Goto [SQuAD Dataset Preprocessing](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/pre-processing) and ensure that you have `train-v1.1.json` and `dev-v1.1.json` files. 
+  - In case you don't have them, you can download them [here](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_bert-base-uncased/dev-v1.1.json) and [here](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_bert-base-uncased/train-v1.1.json)
+- Goto [SQuAD Dataset Preprocessing](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/pre-processing/SQuAD_Dataset_preprocessing.ipynb) file and run all the cells.
 - To execute and view the results of BERT (bert-base-uncased) approach, please go through the instructions provided in the [SQuAD_chatbot_using_bert-base-uncased_README.md](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_bert-base-uncased/SQuAD_chatbot_using_bert-base-uncased_README.md) file.
 - To execute and view the results of GPT (gpt2-medium using LoRA and PEFT) approach, please go through the instructions provided in the [SQuAD_chatbot_using_gpt2-medium_README.md](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_gpt2-medium/SQuAD_chatbot_using_gpt2-medium_README.md) file.
+
+# Which chatbot architecture should the users use
+- Actually, both the chatbots are running well.
+- [SQuAD_using_gpt2-medium](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/tree/chatbot-by-ravi/SQuAD_using_gpt2-medium) generates the answers but most of the times it has issues.
+  - For more information on the observations and technical details, refer [training](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_gpt2-medium/squad_lora_gpt2_medium_training.ipynb) and [validation](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_gpt2-medium/squad_lora_gpt2_medium_validation.ipynb) files.
+- [SQuAD_using_bert-base-uncased](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/tree/chatbot-by-ravi/SQuAD_using_bert-base-uncased) is working very well as expected.
+- Final conclusion is: ```Users can use any chatbot. But for perfect generation of answers, make use of [SQuAD_using_bert-base-uncased](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/tree/chatbot-by-ravi/SQuAD_using_bert-base-uncased)```
 
 # Authors
 | Author            | Contact Details         |
