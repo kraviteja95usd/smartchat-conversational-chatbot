@@ -66,7 +66,7 @@ jupyter lab
           - Ensure that you are asking the question from the same context.
           - Ensure that if you ask your question without setting the context first, you will notice a message `Please set the context before asking questions.` at the bottom of the UI page.
           - If your system is in Dark mode, this UI page looks in the same theme. If you system is in Light mode, then you will view it in white color.
-    - You can look at the execution results within the Notebook file as well as [here](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/tree/chatbot-by-ravi/SQuAD_using_gpt2-medium/SQuAD_using_gpt2-medium_chatbot_UI_Screenshots) and interpret accordingly.
+    - You can look at the execution results within the Notebook file as well as [here](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/tree/main/SQuAD_using_gpt2-medium/SQuAD_using_gpt2-medium_chatbot_UI_Screenshots) and interpret accordingly.
       - Note that there are 2 folders inside it and there are screenshot files inside each of those folders. You can view anything to understand that.
 
 ## How do I directly run this Chatbot
