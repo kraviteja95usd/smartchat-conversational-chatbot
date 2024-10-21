@@ -64,7 +64,7 @@ jupyter lab
           - Ensure that you are asking the question from the same context.
           - Ensure that if you ask your question without setting the context first, you will notice a message `Please set the context before asking questions.` at the bottom of the UI page.
           - If your system is in Dark mode, this UI page looks in the same theme. If you system is in Light mode, then you will view it in white color.
-    - You can look at the execution results within the Notebook file as well as [here](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/tree/chatbot-by-ravi/SQuAD_using_bert-base-uncased/SQuAD_using_bert-base-uncased_chatbot_UI_Screenshots) and interpret accordingly.
+    - You can look at the execution results within the Notebook file as well as [here](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/tree/main/SQuAD_using_bert-base-uncased/SQuAD_using_bert-base-uncased_chatbot_UI_Screenshots) and interpret accordingly.
       - Note that there are 2 PDFs and 2 word documents inside it. You can view anything to understand that. Whatever the word documents we have there, the PDFs also have the same content. I just uploaded both the formats.
 
 
@@ -72,6 +72,6 @@ jupyter lab
 ## How do I directly run this Chatbot
 - Create a folder at your desired location in your system.
 - Download the trained model `squad-bert-trained` from [here](https://drive.google.com/drive/folders/1f0YfPf7MHP6rtNPhdoRFzccLkds17pfY).
-- Now, download the `SQuAD_using_bert-base-uncased_chatbot_UI.ipynb` file from [here](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_bert-base-uncased/SQuAD_using_bert-base-uncased_chatbot_UI.ipynb) and place it in the folder where you downloaded the model.
+- Now, download the `SQuAD_using_bert-base-uncased_chatbot_UI.ipynb` file from [here](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/main/SQuAD_using_bert-base-uncased/SQuAD_using_bert-base-uncased_chatbot_UI.ipynb) and place it in the folder where you downloaded the model.
 - Open `jupyter notebook` or `jupyter lab` in the same path using your terminal, and execute the `SQuAD_using_bert-base-uncased_chatbot_UI.ipynb` file. You will notice a link provided there. [Example Link is here](http://127.0.0.1:7860)
 - Hit the link and you are good to go!
