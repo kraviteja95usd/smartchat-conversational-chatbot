@@ -81,7 +81,7 @@ More information can be found at: https://rajpurkar.github.io/SQuAD-explorer/
 - [SQuAD_using_gpt2-medium](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/tree/chatbot-by-ravi/SQuAD_using_gpt2-medium) generates the answers but most of the times it has issues.
   - For more information on the observations and technical details, refer [training](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_gpt2-medium/squad_lora_gpt2_medium_training.ipynb) and [validation](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_gpt2-medium/squad_lora_gpt2_medium_validation.ipynb) files.
 - [SQuAD_using_bert-base-uncased](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/tree/chatbot-by-ravi/SQuAD_using_bert-base-uncased) is working very well as expected.
-- Final conclusion is: ```Users can use any chatbot. But for perfect generation of answers, make use of [SQuAD_using_bert-base-uncased](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/tree/chatbot-by-ravi/SQuAD_using_bert-base-uncased)```
+- Final conclusion is: Users can use any chatbot. But for perfect generation of answers, make use of [SQuAD_using_bert-base-uncased](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/tree/chatbot-by-ravi/SQuAD_using_bert-base-uncased)
 
 # Authors
 | Author            | Contact Details         |
