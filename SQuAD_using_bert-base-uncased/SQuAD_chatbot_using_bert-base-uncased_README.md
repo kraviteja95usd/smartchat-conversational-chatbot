@@ -1,8 +1,8 @@
 ## Contents
-1. [Usage Instructions in Local System](#usage-instructions-in-local-system)
-2. [Note to the Viewers or Users](#note-to-the-viewers-or-users)
+1. [Usage Instructions and Execution Steps in Local System](#usage-instructions-and-execution-steps-in-local-system)
+2. [How do I directly run this Chatbot](#how-do-i-directly-run-this-chatbot)
 
-# Usage Instructions in Local System
+# Usage Instructions and Execution Steps in Local System
 - Clone using HTTPS
 ```commandline
 https://github.com/kraviteja95usd/smartchat-conversational-chatbot.git
@@ -45,6 +45,7 @@ OR -
 ```commandline
 jupyter lab
 ``` 
+- Let me explain the step-by-step instructions of the code structure here.
 - Step-1:
   - Click (Single click or double click whatever works) on the `SQuAD_using_bert-base-uncased_training_and_validation.ipynb` file.
   - You will notice the file opened.
@@ -66,7 +67,11 @@ jupyter lab
     - You can look at the execution results within the Notebook file as well as [here](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/tree/chatbot-by-ravi/SQuAD_using_bert-base-uncased/SQuAD_using_bert-base-uncased_chatbot_UI_Screenshots) and interpret accordingly.
       - Note that there are 2 PDFs and 2 word documents inside it. You can view anything to understand that. Whatever the word documents we have there, the PDFs also have the same content. I just uploaded both the formats.
 
-# Note to the Viewers or Users
-- Ensure you are going through [this](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/README.md#which-chatbot-architecture-should-the-users-use) before proceeding with the next step.
-- For [SQuAD_using_bert-base-uncased](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/tree/chatbot-by-ravi/SQuAD_using_bert-base-uncased), the size of the trained model is 435 MB. Unfortunately, I could not upload the trained model here.
-- Whoever wishes to run the chatbot, request to them to execute all the cells in [this file](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_bert-base-uncased/SQuAD_using_bert-base-uncased_training_and_validation.ipynb) and then run the [Chatbot UI](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_bert-base-uncased/SQuAD_using_bert-base-uncased_chatbot_UI.ipynb) file.
+
+
+## How do I directly run this Chatbot
+- Create a folder at your desired location in your system.
+- Download the trained model `squad-bert-trained` from [here](https://drive.google.com/drive/folders/1f0YfPf7MHP6rtNPhdoRFzccLkds17pfY).
+- Now, download the `SQuAD_using_bert-base-uncased_chatbot_UI.ipynb` file from [here](https://github.com/kraviteja95usd/smartchat-conversational-chatbot/blob/chatbot-by-ravi/SQuAD_using_bert-base-uncased/SQuAD_using_bert-base-uncased_chatbot_UI.ipynb) and place it in the folder where you downloaded the model.
+- Open `jupyter notebook` or `jupyter lab` in the same path using your terminal, and execute the `SQuAD_using_bert-base-uncased_chatbot_UI.ipynb` file. You will notice a link provided there. [Example Link is here](http://127.0.0.1:7860)
+- Hit the link and you are good to go!
